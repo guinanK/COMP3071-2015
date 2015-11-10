@@ -473,5 +473,35 @@ Present "Midterm" project
 
 * http://www.antlr.org/[Parsing with ANTLR]
 
+----
+cd ~/COMP3071-2015/antlr
+./antlr.sh Expr.g4
+javac -cp antlr-4.5.1-complete.jar *.java
+echo "100+100*7" | ./grun.sh Expr prog -gui
+----
+
 == November 6
 
+* http://www.antlr.org/api/Java/index.html?overview-summary.html[ANTLR runtime API]
+* https://github.com/antlr/grammars-v4[ANTLR grammars]
+
+In Git Bash:
+
+----
+cd ~/COMP3071-2015/
+git pull upstream master
+cd language/
+./gradlew build
+./gradlew eclipse
+find .
+git checkout -- src/main/java/Main.java
+git checkout -- src/main/java/Printer.java
+----
+
+In Eclipse:
+
+. File -> Import...
+. General -> Existing Projects into workspace
+. Next
+. Select root directory `COMP3071-2015`
+. Finish
